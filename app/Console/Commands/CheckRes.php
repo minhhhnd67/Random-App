@@ -28,9 +28,9 @@ class CheckRes extends Command
      */
     public function handle()
     {
-        $data = Random::where('rand_date', '>=', '2024-11-07')
-            ->where('rand_date', '<=', '2024-11-13')
-            ->where('rand_value', '33')
+        $data = Random::where('rand_date', '>=', '2024-03-16')
+            ->where('rand_date', '<=', '2024-03-20')
+            ->where('rand_value', '04')
             ->orderBy('rand_date', 'asc')
             ->get()
             ->toArray();

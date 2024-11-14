@@ -20,8 +20,8 @@ class ScrapeLotteryData extends Command
     public function handle()
     {
         // Lấy `start_date` và `end_date` từ tham số
-        $startDate = Carbon::parse($this->argument('start_date'));
-        $endDate = Carbon::parse($this->argument('end_date'));
+        $startDate = Carbon::createFromFormat('Y-m-d',$this->argument('start_date'));
+        $endDate = Carbon::createFromFormat($this->argument('end_date'));
 
         // Kiểm tra xem ngày bắt đầu có trước ngày kết thúc không
         if ($startDate->greaterThan($endDate)) {
